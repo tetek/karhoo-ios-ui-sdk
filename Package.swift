@@ -15,9 +15,6 @@ let package = Package(
             name: "KarhooUISDK",
             targets: ["KarhooUISDK"]),
         .library(
-            name: "KarhooUISDKAdyen",
-            targets: ["KarhooUISDKAdyen"]),
-        .library(
             name: "KarhooUISDKBraintree",
             targets: ["KarhooUISDKBraintree"]),
 
@@ -26,7 +23,6 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
         .package(url: "https://github.com/karhoo/karhoo-ios-sdk", branch: "master"),
 //        .package(url: "https://github.com/karhoo/karhoo-ios-sdk", exact: "1.8.4"),
-        .package(url: "https://github.com/Adyen/adyen-ios", exact: "4.11.2"),
         .package(url: "https://github.com/braintree/braintree-ios-drop-in", exact: "9.8.0"),
         .package(url: "https://github.com/braintree/braintree_ios", exact: "5.20.1"),
         .package(url: "https://github.com/pointfreeco/swift-snapshot-testing", exact: "1.9.0"),
@@ -43,14 +39,6 @@ let package = Package(
                 .process("Workers/CountryAndPhone/country_phone_validation_rules.json"),
                 .copy("PrivacyInfo.xcprivacy")
             ]),
-
-        .target(
-            name: "KarhooUISDKAdyen",
-            dependencies: [.target(name: "KarhooUISDK"),
-                           .product(name: "Adyen", package: "adyen-ios"),
-                           .product(name: "AdyenDropIn", package: "adyen-ios")],
-            path: "AdyenPSP"),
-
         .target(
             name: "KarhooUISDKBraintree",
             dependencies: [.target(name: "KarhooUISDK"),
@@ -69,7 +57,6 @@ let package = Package(
             dependencies: [
                 .target(name: "KarhooUISDKTestUtils"),
                 .target(name: "KarhooUISDK"),
-                .target(name: "KarhooUISDKAdyen"),
                 .target(name: "KarhooUISDKBraintree"),
                 .product(name: "Quick", package: "Quick"),
                 .product(name: "Nimble", package: "Nimble")
@@ -82,7 +69,6 @@ let package = Package(
             dependencies: [
                 .target(name: "KarhooUISDKTestUtils"),
                 .target(name: "KarhooUISDK"),
-                .target(name: "KarhooUISDKAdyen"),
                 .target(name: "KarhooUISDKBraintree"),
                 .product(name: "SnapshotTesting", package: "swift-snapshot-testing"),
                 .product(name: "Quick", package: "Quick"),

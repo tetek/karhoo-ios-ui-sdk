@@ -1,42 +1,6 @@
 {
   "pins" : [
     {
-      "identity" : "adyen-3ds2-ios",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Adyen/adyen-3ds2-ios",
-      "state" : {
-        "revision" : "47f657579332c9d36cedd97a0d3487af2cd6d27d",
-        "version" : "2.3.3"
-      }
-    },
-    {
-      "identity" : "adyen-ios",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Adyen/adyen-ios",
-      "state" : {
-        "revision" : "3f4dda50a9b37763b569f93f4e98a80f01cb3c79",
-        "version" : "4.11.2"
-      }
-    },
-    {
-      "identity" : "adyen-networking-ios",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Adyen/adyen-networking-ios",
-      "state" : {
-        "revision" : "9b10df842e774f5c99a2d76b1d950ec4d5d80898",
-        "version" : "1.0.0"
-      }
-    },
-    {
-      "identity" : "adyen-wechatpay-ios",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Adyen/adyen-wechatpay-ios",
-      "state" : {
-        "revision" : "aee9b422f02d3ff75533a3338db45f2f9b9010b0",
-        "version" : "2.1.0"
-      }
-    },
-    {
       "identity" : "braintree-ios-drop-in",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/braintree/braintree-ios-drop-in",
@@ -77,8 +41,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/karhoo/karhoo-ios-sdk",
       "state" : {
-        "revision" : "94833520c40c92364f92fef450bf00584241d5bb",
-        "version" : "1.8.4"
+        "branch" : "master",
+        "revision" : "07324f252059d2ca141333c8ce076c015afbe540"
       }
     },
     {
